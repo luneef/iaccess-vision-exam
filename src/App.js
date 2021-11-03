@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import countries from "./data/country";
+import languages from "./data/language";
+import Options from "./Options";
+import "./style/style.css";
 
-function App() {
+//Main App Component
+const App = () => {
+  const [country, setCountry] = useState("");
+  const [language, setLanguage] = useState("");
+
+  // Sets the display value for country selected
+  const handleCountrySel = (countrysel) => {
+    setCountry(countrysel.label);
+  };
+
+  // Sets the display value for language selected
+  const handleLanguageSel = (languagesel) => {
+    setLanguage(languagesel.label);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <main className="display-main">
+      <div className="form-container">
+        <h1>Display my selected value</h1>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Country: <span>{country ? country : "My selected country"}</span>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+        <p>
+          Language: <span>{language ? language : "My selected language"}</span>
+        </p>
+
+        <Options
+          countries={countries}
+          languages={languages}
+          handleCountrySel={handleCountrySel}
+          handleLanguageSel={handleLanguageSel}
+        />
+      </div>
+    </main>
   );
-}
+};
 
 export default App;

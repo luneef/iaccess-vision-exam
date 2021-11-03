@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.display-main {
+  max-width: 1920px;
+  width: 100%;
+  min-height: 100vh;
+  color: white;
+  background-color: #5299d7;
+  background-image: url("../images/clouds.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 2em;
+
+  h1 {
+    margin-bottom: 0.5em;
+  }
+
+  p {
+    margin-bottom: 0.2em;
+  }
+
+  span {
+    color: rgb(1, 1, 92);
+  }
+}
+
+.form-section {
+  color: black;
+  display: flex;
+  margin-top: 2em;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  padding: 1.5em;
+
+  label {
+    color: rgb(1, 1, 92);
+  }
+}
+
+.select {
+  width: 300px;
+  margin-top: 0.5em;
+}
+
+.language-options {
+  margin-left: 2em;
+}
+
+/*  Media Queries */
+
+@media screen and (max-width: 802px) {
+  .form-section {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .language-options {
+    margin-left: 0;
+  }
+
+  .select {
+    margin-bottom: 2em;
+  }
+}
+
+@media screen and (max-width: 502px) {
+  .form-container {
+    padding: 1em;
+
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+
+  .form-section {
+    padding: 1em;
+  }
+
+  .select {
+    width: 250px;
+  }
+}

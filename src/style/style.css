@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.display-main {
+  max-width: 1920px;
+  width: 100%;
+  min-height: 100vh;
+  color: white;
+  background-color: #5299d7;
+  background-image: url("../images/clouds.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.form-container {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 2em;
+}
+
+.form-container h1 {
+  margin-bottom: 0.5em;
+}
+
+.form-container p {
+  margin-bottom: 0.2em;
+}
+
+.form-container span {
+  color: #01015c;
+}
+
+.form-section {
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 2em;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  padding: 1.5em;
+}
+
+.form-section label {
+  color: #01015c;
+}
+
+.select {
+  width: 300px;
+  margin-top: 0.5em;
+}
+
+.language-options {
+  margin-left: 2em;
+}
+
+/*  Media Queries */
+@media screen and (max-width: 802px) {
+  .form-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .language-options {
+    margin-left: 0;
+  }
+  .select {
+    margin-bottom: 2em;
+  }
+}
+
+@media screen and (max-width: 502px) {
+  .form-container {
+    padding: 1em;
+  }
+  .form-container h1 {
+    font-size: 1.5rem;
+  }
+  .form-section {
+    padding: 1em;
+  }
+  .select {
+    width: 250px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
